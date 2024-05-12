@@ -49,14 +49,15 @@ Constraints:
 0 <= val <= 100
 */
 
-func removeElement(nums []int, val int) int {
+// my solution
+func RemoveElement(nums []int, val int) int {
 	var unMatches int
 	for i := 0; i < len(nums); {
 		if nums[i] == val {
 			nums[i] = nums[len(nums)-1]
 			nums = nums[:len(nums)-1]
-			unMatches++
 		} else {
+			unMatches++
 			i++
 		}
 	}
